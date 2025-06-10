@@ -1,13 +1,21 @@
-
-
+import './App.css';
+import { useState } from 'react';
+import Sqr from './components/Sqr';
 function App() {
+  const [sqrs,setSqrs]= useState(["","","","","","","","",""])
 
 
   return (
-    <>
-   <h1>test</h1>
-    </>
-  )
+<div className='container'>
+<div className="gameboard">
+
+
+ {sqrs.map((sq,index) =>(
+ <Sqr key={index} />
+ ))}
+   </div>
+</div>
+  );
 }
 
 export default App
